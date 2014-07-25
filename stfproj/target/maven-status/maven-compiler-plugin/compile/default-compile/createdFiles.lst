@@ -1,0 +1,5 @@
+br\jus\stf\WebInit.class
+br\jus\stf\controller\PessoaController.class
+br\jus\stf\Application.class
+br\jus\stf\repository\UsuarioRepository.class
+br\jus\stf\model\Usuario.class

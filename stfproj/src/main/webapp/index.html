@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en" data-ng-app="stfproj">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <title>Stf Livros</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="styles/jumbotron.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+      
+    <![endif]-->
+     <!-- Load angularjs -->
+    <script src="js/libs/angular.js"></script>
+    <!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+    <script src="js/libs/angular-resource.js"></script>
+    <script src="js/app/controllers.js"></script>
+      <script src="js/app/app.js"></script>
+	  <script src="js/app/services.js"></script>
+   
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">STF - Livros</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gesmec <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+              
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Usuarios</a></li>
+                <li><a href="#">Carro de Compras</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Menu</li>
+                <li><a href="#">Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+      </div>
+    </div>
+
+    <div class="container" data-ng-view>
+
+	<!-- Aqui entra o conteúdo -->
+      
+
+    
+    </div> <!-- /container -->
+    <hr>
+   	<footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

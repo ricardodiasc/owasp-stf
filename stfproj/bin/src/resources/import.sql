@@ -1,0 +1,1 @@
+insert into usuario(nome,usuario,email,numeroCartao) values('Ricardo Dias','ricardo.cavalcante','ricardo.cavalcante@stf.jus.br','999999999999');
