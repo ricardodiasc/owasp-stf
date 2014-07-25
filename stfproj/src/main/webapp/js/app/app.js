@@ -20,10 +20,13 @@ angular.module('stfproj', ['listaLivrosService']).config(
         [ '$routeProvider', function($routeProvider) {
             $routeProvider.
             // if URL fragment is /home, then load the home partial, with the
-            // MembersCtrl controller
+            // livrosController controller
             when('/listaLivros', {
                 templateUrl : 'partials/listaLivros.html',
-                controller : MembersCtrl
+                controller : HomeControler
+            }).when('/cadastrarLivro',{
+            	templateUrl: 'partials/admin/cadastrarLivro.html',
+            	controller : LivrosController
             // Add a default route
             }).otherwise({
                 redirectTo : '/listaLivros'

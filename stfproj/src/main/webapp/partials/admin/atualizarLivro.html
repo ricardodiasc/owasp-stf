@@ -1,0 +1,46 @@
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+
+<div class="bs-example">
+    <form id="cadastrarLivros" method="post" data-ng-submit="register()">
+    
+     <!-- We output a list of success messages (appropriately styled!) for the form. -->
+            <ul ng-hide="!successMessages" class="success">
+                <li ng-repeat="message in successMessages">{{message}}</li>
+            </ul>
+
+            <!-- Output the list of error messages if any. -->
+            <ul ng-hide="!errorMessages" class="error">
+                <li ng-repeat="message in errorMessages">{{message}}</li>
+            </ul>
+            
+            
+        <div class="form-group">
+            <label for="inputNome">Nome</label>
+            <input type="text" data-ng-model="newLivro.nome" class="form-control" id="inputNome" placeholder="Nome" required>
+            <span class="error" ng-show="errors.name">{{errors.nome}}</span>
+        </div>
+        <div class="form-group">
+            <label for="inputDescricao">Descrição</label>
+            <input type="text" data-ng-model="newLivro.descricao" class="form-control" id="inputDescricao" placeholder="Descrição" required>
+            <span class="error" ng-show="errors.descricao">{{errors.descricao}}</span>
+        </div>
+        
+        <div class="form-group">
+            <label for="inputISBN">ISBN</label>
+            <input type="text" data-ng-model="newLivro.isbn" class="form-control" id="inputIsbn" placeholder="99999999" required>
+            <span class="error" ng-show="errors.name">{{errors.isbn}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="inputNome">Preço</label>
+            <input type="number" data-ng-model="newLivro.preco" class="form-control" id="inputPreco" placeholder="Preço" required>
+            <span class="error" ng-show="errors.preco">{{errors.preco}}</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Gravar</button>
+    </form>
+</div>

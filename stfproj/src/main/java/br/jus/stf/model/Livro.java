@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Ricardo Dias Cavalcante
@@ -17,35 +18,46 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Livro {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
+
+	@NotNull
 	private String nome;
+
+	@NotNull
 	private String descricao;
+	@NotNull
 	private String isbn;
+
+	@NotNull
 	private Double preco;
-	@OneToMany(mappedBy="livro")
+
+	private String caminhoImagem;
+
+	@OneToMany(mappedBy = "livro")
 	private List<Comentario> listaComentarios;
 
-	
-	public Livro(){
-		
+	public Livro() {
+
 	}
-	public Livro(Integer id){
+
+	public Livro(Integer id) {
 		this.id = id;
 	}
-	
+
 	/**
-	 * @param id
+	 * @param identificador
 	 * @param nome
 	 * @param descricao
 	 * @param isbn
 	 * @param preco
 	 */
-	public Livro(Integer id, String nome, String descricao, String isbn,
-			Double preco) {
+	public Livro(Integer identificador, String nome, String descricao,
+			String isbn, Double preco) {
 		super();
-		this.id = id;
+		this.id = identificador;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.isbn = isbn;
@@ -56,8 +68,12 @@ public class Livro {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public int getIdentificador() {
+		return id;
+	}
+
+	public void setId(Integer identificador) {
+		this.id = identificador;
 	}
 
 	public String getNome() {
@@ -91,12 +107,23 @@ public class Livro {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+
+	public String getCaminhoImagem() {
+		return caminhoImagem;
+	}
+
+	public void setCaminhoImagem(String caminhoImagem) {
+		this.caminhoImagem = caminhoImagem;
+	}
+
 	public List<Comentario> getListaComentarios() {
 		return listaComentarios;
 	}
+
 	public void setListaComentarios(List<Comentario> listaComentarios) {
 		this.listaComentarios = listaComentarios;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -104,6 +131,7 @@ public class Livro {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -120,6 +148,5 @@ public class Livro {
 			return false;
 		return true;
 	}
-	
-	
+
 }
