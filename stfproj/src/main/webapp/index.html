@@ -28,7 +28,13 @@
       <script src="/js/respond.min.js"></script>
       
     <![endif]-->
-
+<!-- Load angularjs -->
+<script src="js/libs/angular.js"></script>
+<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+<script src="js/libs/angular-resource.js"></script>
+<script src="js/app/controllers.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/services.js"></script>
 </head>
 
 <body>
@@ -43,24 +49,21 @@
 				</button>
 				<a class="navbar-brand" href="#">STF - Livros</a>
 			</div>
-			<div class="navbar-collapse collapse">
+			<div class="navbar-collapse collapse" ng-controller="LoginController">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">Admin <b class="caret"></b></a>
+						data-toggle="dropdown"  ng-show="isLogged">Admin <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-
 							<li><a href="#/cadastrarLivro">Cadastrar Livros</a></li>
-							<li><a href="#">Cadastrar Usuarios</a></li>
-							<li><a href="#">Carro de Compras</a></li>
-							<li class="divider"></li>
-							<li class="dropdown-header">Menu</li>
-							<li><a href="#">Menu</a></li>
 						</ul></li>
 					<li><a href="#about">Sobre</a></li>
 					<li><a href="#contact">Contato</a></li>
+					
 				</ul>
- 				<form id="login" class="navbar-form navbar-right" method="post" action="/login">
+				<div class="navbar-right" ng-show="isLogged">{{ this.username}}</div>
+				
+ 				<form  ng-hide="isLogged" id="login" class="navbar-form navbar-right" method="post" action="/login">
 					<div class="form-group">
 						<input type="text" placeholder="usuario" name="username" class="form-control">
 					</div>
@@ -93,13 +96,7 @@
 	<footer>
 		<p>&copy; Company 2013</p>
 	</footer>
-<!-- Load angularjs -->
-<script src="js/libs/angular.js"></script>
-<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
-<script src="js/libs/angular-resource.js"></script>
-<script src="js/app/controllers.js"></script>
-<script src="js/app/app.js"></script>
-<script src="js/app/services.js"></script>
+
 
 </body>
 </html>

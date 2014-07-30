@@ -1,5 +1,16 @@
-br\jus\stf\WebInit.class
 br\jus\stf\controller\PessoaController.class
+br\jus\stf\model\Livro.class
+br\jus\stf\repository\CarroComprasRepository.class
+br\jus\stf\controller\LivroController.class
+br\jus\stf\WebMvcConfig.class
+br\jus\stf\WebInit.class
+br\jus\stf\model\CarroCompras.class
 br\jus\stf\Application.class
+br\jus\stf\repository\LivroRepository.class
 br\jus\stf\repository\UsuarioRepository.class
+br\jus\stf\WebSecurityConfig.class
 br\jus\stf\model\Usuario.class
+br\jus\stf\controller\UsuarioController.class
+br\jus\stf\model\Comentario.class
+br\jus\stf\controller\LoginController.class
+br\jus\stf\controller\CarroComprasController.class

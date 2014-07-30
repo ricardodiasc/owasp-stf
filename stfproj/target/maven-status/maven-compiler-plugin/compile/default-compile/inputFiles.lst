@@ -1,5 +1,16 @@
-C:\java\sts\workspaces\dev\stfproj\src\main\java\br\jus\stf\Application.java
-C:\java\sts\workspaces\dev\stfproj\src\main\java\br\jus\stf\controller\PessoaController.java
-C:\java\sts\workspaces\dev\stfproj\src\main\java\br\jus\stf\WebInit.java
-C:\java\sts\workspaces\dev\stfproj\src\main\java\br\jus\stf\model\Usuario.java
-C:\java\sts\workspaces\dev\stfproj\src\main\java\br\jus\stf\repository\UsuarioRepository.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\controller\CarroComprasController.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\model\Usuario.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\WebMvcConfig.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\repository\CarroComprasRepository.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\repository\LivroRepository.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\Application.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\controller\LoginController.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\controller\UsuarioController.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\model\Livro.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\controller\PessoaController.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\model\CarroCompras.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\WebSecurityConfig.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\repository\UsuarioRepository.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\model\Comentario.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\WebInit.java
+C:\Users\Avell G1740NEW\git\owasp-stf\stfproj\src\main\java\br\jus\stf\controller\LivroController.java
