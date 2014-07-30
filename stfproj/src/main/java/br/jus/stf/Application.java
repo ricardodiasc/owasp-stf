@@ -16,10 +16,4 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-//	@RequestMapping("/")
-//	@ResponseBody
-//	public String teste() {
-//		return "teste";
-//	}
-
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-ng-app="stfproj">
 <head>
@@ -29,13 +28,6 @@
       <script src="/js/respond.min.js"></script>
       
     <![endif]-->
-<!-- Load angularjs -->
-<script src="js/libs/angular.js"></script>
-<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
-<script src="js/libs/angular-resource.js"></script>
-<script src="js/app/controllers.js"></script>
-<script src="js/app/app.js"></script>
-<script src="js/app/services.js"></script>
 
 </head>
 
@@ -68,12 +60,12 @@
 					<li><a href="#about">Sobre</a></li>
 					<li><a href="#contact">Contato</a></li>
 				</ul>
-				<form class="navbar-form navbar-right">
+ 				<form id="login" class="navbar-form navbar-right" method="post" action="/login">
 					<div class="form-group">
-						<input type="text" placeholder="Email" class="form-control">
+						<input type="text" placeholder="usuario" name="username" class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control">
+						<input type="password" name="password" placeholder="Password" class="form-control">
 					</div>
 					<button type="submit" class="btn btn-success">Login</button>
 				</form>
@@ -101,7 +93,13 @@
 	<footer>
 		<p>&copy; Company 2013</p>
 	</footer>
-
+<!-- Load angularjs -->
+<script src="js/libs/angular.js"></script>
+<!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+<script src="js/libs/angular-resource.js"></script>
+<script src="js/app/controllers.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/services.js"></script>
 
 </body>
 </html>

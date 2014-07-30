@@ -16,7 +16,7 @@ import br.jus.stf.model.Usuario;
  */
 @Component
 public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
-
+	
 	List<Usuario> findByUsuario(String usuario);
 
 }

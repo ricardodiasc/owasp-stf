@@ -6,8 +6,8 @@
  * @param Livros
  */
 function LivrosController($scope, $http, Livros) {
-
-    // Define a refresh function, that updates the data from the REST service
+	console.log('carrega livros controller');
+	// Define a refresh function, that updates the data from the REST service
     $scope.refresh = function() {
         $scope.livros = Livros.query();
     };
@@ -18,6 +18,8 @@ function LivrosController($scope, $http, Livros) {
         // clear input fields
         $scope.newLivro = {};
     };
+    
+   
 
     // Define a register function, which adds the member using the REST service,
     // and displays any error messages
@@ -58,6 +60,21 @@ function LivrosController($scope, $http, Livros) {
     $scope.orderBy = 'nome';
 }
 
+function LoginController($scope, $http, Login){
+	console.log('carrega Login Controller');
+	this.username = "";
+	this.password = "";
+	
+	$scope.login = function(){
+		console.log('chamou a funcao de login');
+		$http.post("/login",{'username':this.username,'password':this.password}).sucess(function(data){
+			alert('sucesso');
+		}).error(function(){
+			alert('erro!');
+		});
+	};
+}
+
 
 /**
  * Home controller 
@@ -67,7 +84,7 @@ function LivrosController($scope, $http, Livros) {
  * @param Livros
  */
 function HomeControler($scope, $http, Livros) {
-
+	alert('carrega home controller');
 
     // Define a refresh function, that updates the data from the REST service
     $scope.refresh = function() {
@@ -80,10 +97,22 @@ function HomeControler($scope, $http, Livros) {
         // clear input fields
         $scope.newLivro = {};
     };
+    
+    $scope.login = function(){
+		alert('chamou a funcao');
+		var xsrf = $.param({'username':this.username,'password':this.password});
+		$http.post("/login",xsrf,{headers:{'Content-Type': 'application/x-www-form-urlencoded'}}).success(function(data, status, headers, config){
+			alert('sucesso');
+			alert(config.params['error']);
+		}).error(function(){
+			alert('erro!');
+		});
+	};
 
     // Define a register function, which adds the member using the REST service,
     // and displays any error messages
     $scope.register = function() {
+    	alert('tenta registrar')
         $scope.successMessages = '';
         $scope.errorMessages = '';
         $scope.errors = {};

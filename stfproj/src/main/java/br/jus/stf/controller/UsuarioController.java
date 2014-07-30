@@ -23,7 +23,7 @@ public class UsuarioController {
 	public UsuarioRepository usuarioRepository;
 
 	@RequestMapping(value="/usuario", method = RequestMethod.POST)
-	public void incluirUsuario(@RequestBody @Valid Usuario usuario){
+	public void incluirUsuario(@RequestBody Usuario usuario){
 		usuarioRepository.save(usuario);
 	}
 	
