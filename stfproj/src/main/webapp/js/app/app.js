@@ -24,7 +24,7 @@ app.controller('LoginController',function($scope,$http){
 	$scope.password = "";
 	$scope.isLogged = false;
 
-	$http.get("/rest/isLogged").success(function(data){
+	$http.get("/stfproj/rest/isLogged").success(function(data){
 		$scope.isLogged = data;
 			console.log(data);
 	}).error(function(data){
@@ -32,7 +32,7 @@ app.controller('LoginController',function($scope,$http){
 	});
 	
 	if($scope.isLogged){
-		$http.get("/rest/getUserLogged").success(function(data){
+		$http.get("/stfproj/rest/getUserLogged").success(function(data){
 			$scope.username = data;
 				console.log(data);
 		}).error(function(data){
@@ -43,7 +43,7 @@ app.controller('LoginController',function($scope,$http){
 	
 	$scope.login = function(){
 		console.log('chamou a funcao de login');
-		$http.post("/login",{'username':this.username,'password':this.password}).sucess(function(data){
+		$http.post("/stfproj/login",{'username':this.username,'password':this.password}).sucess(function(data){
 			console.log('sucesso');
 		}).error(function(){
 			console.log('erro!');
@@ -52,7 +52,7 @@ app.controller('LoginController',function($scope,$http){
 	
 	$scope.getUsername = function(){
 		console.log('getUsername')
-		$http.get("/rest/getUserLogged").success(function(data){
+		$http.get("/stfproj/rest/getUserLogged").success(function(data){
 			if(data == true){
 				console.log('logado');
 			}else{
@@ -77,7 +77,7 @@ app.config(
             	controller : LivrosController
             // Add a default route
             }).otherwise({
-                redirectTo : '/listaLivros'
+                redirectTo : 'listaLivros'
             });
         } ]);
 
